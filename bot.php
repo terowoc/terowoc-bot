@@ -17,9 +17,6 @@ if ($text == '/start') {
 		$db->prepare("INSERT INTO users (chat_id) VALUES (?)")->execute([$chat_id]);
 	}
 
-    // $option = [["Admin blan bog'lanish"], ['Git', 'Credit']];
-    // // Create a permanent custom keyboard
-    // $keyb = $bot->buildKeyBoard($option, $onetime = false);
     $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Welcome!"];
     $bot->sendMessage($content);
 }else{
