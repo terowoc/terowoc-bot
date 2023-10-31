@@ -1,5 +1,6 @@
 {
     "require": {
-        "eleirbag89/telegrambotphp": "^1.4"
+        "doctrine/dbal": "^3.7",
+        "telegram-bot/api": "^2.5"
     }
 }

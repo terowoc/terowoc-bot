@@ -4,11 +4,56 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit155a09de46b9b77c3cd40825766f5f64
+class ComposerStaticInitcc28aead9dc1ef76de3183d2f3f4ec89
 {
-    public static $files = array (
-        '547f39254e5312c66b30c9b6a7d3570f' => __DIR__ . '/..' . '/eleirbag89/telegrambotphp/Telegram.php',
-        '221a7c0887f892e44dd08191321d3815' => __DIR__ . '/..' . '/eleirbag89/telegrambotphp/TelegramErrorLogger.php',
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'TelegramBot\\Api\\' => 16,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Cache\\' => 10,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Deprecations\\' => 22,
+            'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\' => 16,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'TelegramBot\\Api\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/telegram-bot/api/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'Doctrine\\Deprecations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
+        ),
+        'Doctrine\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/dbal/src',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
+        ),
     );
 
     public static $classMap = array (
@@ -18,7 +63,9 @@ class ComposerStaticInit155a09de46b9b77c3cd40825766f5f64
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit155a09de46b9b77c3cd40825766f5f64::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcc28aead9dc1ef76de3183d2f3f4ec89::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcc28aead9dc1ef76de3183d2f3f4ec89::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitcc28aead9dc1ef76de3183d2f3f4ec89::$classMap;
 
         }, null, ClassLoader::class);
     }
