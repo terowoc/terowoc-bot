@@ -2,8 +2,8 @@
 
 require 'vendor/autoload.php';
 $botConfig = require 'config/bot.php';
-$dbConfig = require 'config/bot.php';
-$langConfigConfig = require 'config/bot.php';
+$dbConfig = require 'config/database.php';
+$langConfigConfig = require 'config/language.php';
 
 try {
     $bot = new \TelegramBot\Api\Client($botConfig['token']);
