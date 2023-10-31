@@ -1,6 +1,6 @@
 {
     "require": {
-        "doctrine/dbal": "^3.7",
+        "doctrine/dbal": "3.7",
         "telegram-bot/api": "^2.5"
     }
 }

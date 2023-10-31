@@ -9,7 +9,7 @@ try {
     $bot = new \TelegramBot\Api\Client($botConfig['token']);
     $conn = \Doctrine\DBAL\DriverManager::getConnection($dbConfig);
 
-    $bot->command('start', function ($message) use ($bot, $conn, $langConfig) {
+    $bot->command('start', function ($message) use ($bot, $conn, $langConfig, $botConfig) {
         $message_id = $message->getMessageId();
         $chat_id = $message->getFrom()->getId();
         $text = $message->getText();
@@ -92,7 +92,7 @@ try {
         }
     });
 
-    $bot->on(function (\TelegramBot\Api\Types\Update $update) use ($bot, $conn, $langConfig) {
+    $bot->on(function (\TelegramBot\Api\Types\Update $update) use ($bot, $conn, $langConfig, $botConfig) {
         $message = $update->getMessage();
         $message_id = $message->getMessageId();
         $chat_id = $message->getFrom()->getId();
